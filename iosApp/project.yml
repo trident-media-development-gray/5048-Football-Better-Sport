@@ -17,11 +17,38 @@ targets:
     platform: iOS
     deploymentTarget: "16.6"
     sources:
-      - iosApp
+      - path: iosApp
+    configFiles:
+      Debug: Configuration/Config.xcconfig
+      Release: Configuration/Config.xcconfig
+    info:
+      path: iosApp/Info.plist
+      properties:
+        CFBundleDisplayName: Football Better Sport
+        CFBundleName: Football-Better-Sport
+        CADisableMinimumFrameDurationOnPhone: true
+        LSRequiresIPhoneOS: true
+        UIRequiresFullScreen: true
+        UIStatusBarHidden: true
+        UIStatusBarStyle: UIStatusBarStyleLightContent
+        UIViewControllerBasedStatusBarAppearance: false
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.brazil.football.better.sport
-        INFOPLIST_FILE: iosApp/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         TARGETED_DEVICE_FAMILY: "1,2"
         ENABLE_PREVIEWS: YES
         SWIFT_VERSION: "5.0"

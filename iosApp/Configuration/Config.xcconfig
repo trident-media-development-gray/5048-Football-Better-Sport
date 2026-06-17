@@ -1,4 +1,4 @@
 TEAM_ID=
-BUNDLE_ID=com.sample.kmp
-APP_NAME=App Name 2 (iOS)
-KOTLIN_FRAMEWORK_BUILD_TYPE=Debug
+BUNDLE_ID=com.brazil.football.better.sport
+APP_NAME=Football Better Sport
+KOTLIN_FRAMEWORK_BUILD_TYPE=

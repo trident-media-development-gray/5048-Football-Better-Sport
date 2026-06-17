@@ -1,53 +1,27 @@
-# Gradle
-.gradle/
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/**/build/
-!**/src/**/build/
+# macOS
+.DS_Store
 
-# Kotlin
-.kotlin/
-*.iml
-
-# IDE - IntelliJ / Android Studio
-.idea/*
-!.idea/codeStyles/
-!.idea/inspectionProfiles/
-!.idea/runConfigurations/
-*.ipr
-*.iws
-out/
-
-# Android
-local.properties
-/captures
-.externalNativeBuild
-.cxx
-
-# Kotlin/Native & Konan
-konan.txt
-.konan/
-
-# Kotlin Multiplatform Resources
-kotlin-multiplatform-resources/
-
-# iOS / Xcode
+# Xcode user data
 xcuserdata/
 *.xcuserstate
 *.xcworkspace/xcuserdata/
-iosApp/Pods/
-iosApp/build/
-iosApp/.build/
-Podfile.lock
 DerivedData/
+build/
+.build/
 
-# KMP generated Xcode framework artifacts
-xcode-frameworks/
-xcode-check/
+# The Xcode project can be regenerated from iosApp/project.yml via `xcodegen`.
+# It is kept committed so the app opens in Xcode without extra tooling.
 
-# CocoaPods
+# CocoaPods / SPM (not used, kept for safety)
 Pods/
+Podfile.lock
+.swiftpm/
 
-# OS
-.DS_Store
-Thumbs.db
+# Misc
+*.moved-aside
+*.hmap
+*.ipa
+fastlane/.env
+fastlane/*.p8
+vendor/bundle/
+.bundle/

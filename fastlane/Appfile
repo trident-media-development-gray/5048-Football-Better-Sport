@@ -1,0 +1,7 @@
+app_identifier("com.brazil.football.better.sport")
+
+for_platform :ios do
+  apple_id(ENV["APPLE_ID"])
+  team_id(ENV["TEAM_ID"])
+  itc_team_id(ENV["ITC_TEAM_ID"])
+end
