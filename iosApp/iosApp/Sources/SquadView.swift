@@ -5,9 +5,9 @@ struct SquadView: View {
     @EnvironmentObject var fan: FanStore
     @StateObject private var model = SquadViewModel()
     @State private var favouritesOnly = false
+    @Environment(\.horizontalSizeClass) private var sizeClass
 
-    private let columns = [GridItem(.flexible(), spacing: 14),
-                           GridItem(.flexible(), spacing: 14)]
+    private var columns: [GridItem] { AppLayout.gridColumns(sizeClass) }
 
     /// Players currently shown — the position-filtered set, narrowed to
     /// favourites when the Favourites category is active.
@@ -34,6 +34,7 @@ struct SquadView: View {
             }
             .padding(.horizontal, 18)
             .padding(.top, 8)
+            .readableWidth()
         }
     }
 
@@ -182,6 +183,7 @@ struct PlayerDetailView: View {
                 Color.clear.frame(height: 24)
             }
             .padding(.horizontal, 18)
+            .readableWidth()
         }
         .background(PageBackground())
         .navigationBarTitleDisplayMode(.inline)

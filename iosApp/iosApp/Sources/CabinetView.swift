@@ -5,9 +5,9 @@ struct CabinetView: View {
     @EnvironmentObject var loc: LocalizationManager
     @EnvironmentObject var fan: FanStore
     @StateObject private var model = CabinetViewModel()
+    @Environment(\.horizontalSizeClass) private var sizeClass
 
-    private let columns = [GridItem(.flexible(), spacing: 14),
-                           GridItem(.flexible(), spacing: 14)]
+    private var columns: [GridItem] { AppLayout.gridColumns(sizeClass) }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -18,6 +18,7 @@ struct CabinetView: View {
             }
             .padding(.horizontal, 18)
             .padding(.top, 8)
+            .readableWidth()
         }
         .sheet(item: $model.selectedKit) { item in
             KitDetailSheet(item: item)
@@ -261,6 +262,7 @@ struct KitDetailSheet: View {
                 .padding(.bottom, 24)
             }
             .padding(.horizontal, 20)
+            .readableWidth(560)
         }
     }
 }

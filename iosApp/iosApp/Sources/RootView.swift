@@ -113,5 +113,8 @@ struct CustomTabBar: View {
             .stroke(Brand.navyLine, lineWidth: 1))
         .padding(.horizontal, 14)
         .padding(.bottom, 6)
+        // Keep the bar aligned with the centred content column on iPad
+        // instead of stretching across the full width of the screen.
+        .readableWidth()
     }
 }

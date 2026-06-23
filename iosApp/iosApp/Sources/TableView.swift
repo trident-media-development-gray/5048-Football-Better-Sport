@@ -12,6 +12,7 @@ struct TableView: View {
             }
             .padding(.horizontal, 18)
             .padding(.top, 8)
+            .readableWidth()
         }
     }
 

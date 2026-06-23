@@ -15,6 +15,7 @@ struct SettingsView: View {
                     Color.clear.frame(height: 20)
                 }
                 .padding(.horizontal, 20)
+                .readableWidth()
             }
         }
     }

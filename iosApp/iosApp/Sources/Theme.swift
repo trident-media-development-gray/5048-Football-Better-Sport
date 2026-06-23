@@ -54,6 +54,32 @@ extension Font {
     }
 }
 
+/// Layout constants that keep the app legible across every screen size.
+/// Named `AppLayout` to avoid colliding with SwiftUI's `Layout` protocol.
+enum AppLayout {
+    /// Caps the main content column so screens read as an intentional,
+    /// centred layout on iPad and other large displays instead of stretching
+    /// edge-to-edge. Phones are narrower than this, so their layout is
+    /// unchanged.
+    static let contentMaxWidth: CGFloat = 820
+
+    /// Number of grid columns for the current horizontal size class —
+    /// two on iPhone (compact), three on iPad (regular).
+    static func gridColumns(_ sizeClass: UserInterfaceSizeClass?, spacing: CGFloat = 14) -> [GridItem] {
+        let count = sizeClass == .regular ? 3 : 2
+        return Array(repeating: GridItem(.flexible(), spacing: spacing), count: count)
+    }
+}
+
+extension View {
+    /// Centres content within a comfortable maximum width on large screens so
+    /// layouts stay phone-native on iPhone but don't sprawl across an iPad.
+    func readableWidth(_ maxWidth: CGFloat = AppLayout.contentMaxWidth) -> some View {
+        frame(maxWidth: maxWidth)
+            .frame(maxWidth: .infinity)
+    }
+}
+
 /// Soft card surface used across the app.
 struct CardSurface: ViewModifier {
     var radius: CGFloat = 22

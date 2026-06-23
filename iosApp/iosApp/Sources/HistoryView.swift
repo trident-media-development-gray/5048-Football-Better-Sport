@@ -4,9 +4,9 @@ struct HistoryView: View {
     @EnvironmentObject var loc: LocalizationManager
     @StateObject private var model = HistoryViewModel()
     @State private var selectedLegend: Legend? = nil
+    @Environment(\.horizontalSizeClass) private var sizeClass
 
-    private let columns = [GridItem(.flexible(), spacing: 14),
-                           GridItem(.flexible(), spacing: 14)]
+    private var columns: [GridItem] { AppLayout.gridColumns(sizeClass) }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -18,6 +18,7 @@ struct HistoryView: View {
             }
             .padding(.horizontal, 18)
             .padding(.top, 8)
+            .readableWidth()
         }
         .sheet(item: $selectedLegend) { legend in
             LegendDetailSheet(legend: legend)
@@ -263,6 +264,7 @@ struct LegendDetailSheet: View {
                     Color.clear.frame(height: 20)
                 }
                 .padding(.horizontal, 20)
+                .readableWidth(560)
             }
         }
     }
