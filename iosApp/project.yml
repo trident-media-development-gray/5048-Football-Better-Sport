@@ -20,7 +20,7 @@ schemes:
       config: Release
 settings:
   base:
-    MARKETING_VERSION: "1.1"
+    MARKETING_VERSION: "1.2"
     CURRENT_PROJECT_VERSION: "1"
     IPHONEOS_DEPLOYMENT_TARGET: "16.6"
     SWIFT_VERSION: "5.0"
