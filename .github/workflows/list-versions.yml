@@ -1,0 +1,30 @@
+name: List App Store Versions (diagnostic)
+
+# Manual diagnostic: prints every existing App Store version string so we can
+# pick a free MARKETING_VERSION. No Xcode build — just the ASC API via spaceship.
+on:
+  workflow_dispatch:
+
+jobs:
+  list-versions:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: List versions
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_CONTENT: ${{ secrets.ASC_KEY_CONTENT }}
+        run: bundle exec fastlane ios list_versions
