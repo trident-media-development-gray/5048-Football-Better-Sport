@@ -2,13 +2,14 @@ import SwiftUI
 import UIKit
 
 enum Tab: Int, CaseIterable {
-    case hub, table, squad, history, cabinet
+    case hub, table, squad, news, history, cabinet
 
     var titleKey: LKey {
         switch self {
         case .hub:     return .tabHub
         case .table:   return .tabGroup
         case .squad:   return .tabSquad
+        case .news:    return .tabNews
         case .history: return .tabHistory
         case .cabinet: return .tabCabinet
         }
@@ -18,6 +19,7 @@ enum Tab: Int, CaseIterable {
         case .hub:     return "sportscourt.fill"
         case .table:   return "list.number"
         case .squad:   return "person.3.fill"
+        case .news:    return "newspaper.fill"
         case .history: return "books.vertical.fill"
         case .cabinet: return "trophy.fill"
         }
@@ -43,6 +45,7 @@ struct RootView: View {
                     case .hub:     HubView()
                     case .table:   TableView()
                     case .squad:   SquadView()
+                    case .news:    NewsView()
                     case .history: HistoryView()
                     case .cabinet: CabinetView(showSettings: $showSettings)
                     }

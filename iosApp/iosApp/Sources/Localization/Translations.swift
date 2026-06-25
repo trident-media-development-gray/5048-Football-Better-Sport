@@ -25,9 +25,36 @@ enum Translations {
         "contentSection": "Content",
         "languageHint": "Tap a flag to switch instantly",
 
+        // Startup / connectivity
+        "loadingTagline": "Warming up the pitch…",
+        "offlineTitle": "No Connection",
+        "offlineMessage": "We couldn't load the latest. Check your internet connection and try again.",
+
         // Tabs
         "tabHub": "Hub", "tabGroup": "Group", "tabSquad": "Squad",
-        "tabHistory": "History", "tabCabinet": "Cabinet",
+        "tabHistory": "History", "tabCabinet": "Cabinet", "tabNews": "News",
+
+        // News
+        "newsTitle": "Football News",
+        "newsSubtitle": "Live headlines · pull to refresh",
+        "newsEmpty": "No stories right now. Pull to refresh.",
+        "newsRetry": "Try Again",
+        "newsErrorNetwork": "Couldn't reach the news service. Check your connection.",
+        "newsErrorServer": "The news service is unavailable right now.",
+        "newsErrorKey": "News isn't set up yet.",
+        "newsKeyHint": "Add a GNews API key in Config.xcconfig to enable the live feed.",
+
+        // Profile
+        "fanProfile": "Fan Profile",
+        "yourName": "Your Name",
+        "namePlaceholder": "Add your name",
+        "editPhoto": "Edit Photo",
+        "photoHint": "Add a photo to personalise your fan card.",
+        "takePhoto": "Take Photo",
+        "chooseLibrary": "Choose from Library",
+        "removePhoto": "Remove Photo",
+        "cancel": "Cancel",
+        "tapToAddPhoto": "Tap to add a photo",
 
         // Hub
         "predictEarn": "Predict & Earn",
@@ -84,7 +111,8 @@ enum Translations {
         "team.BRA": "Brazil", "team.ARG": "Argentina", "team.FRA": "France",
         "team.ESP": "Spain", "team.POR": "Portugal", "team.ENG": "England",
         "team.GER": "Germany", "team.URU": "Uruguay", "team.CRO": "Croatia",
-        "team.NED": "Netherlands",
+        "team.NED": "Netherlands", "team.ITA": "Italy", "team.MEX": "Mexico",
+        "team.USA": "United States", "team.COL": "Colombia",
 
         // Positions
         "posLong.GK": "Goalkeeper", "posLong.DEF": "Defender",
@@ -99,6 +127,8 @@ enum Translations {
         "nick.beraldo": "The Rampart", "nick.bruno": "The Maestro", "nick.paqueta": "The Joker",
         "nick.rodrygo": "The Rocket", "nick.vini": "Vini Jr", "nick.endrick": "The Future",
         "nick.raphinha": "Pinga", "nick.casemiro": "The Anchor", "nick.danilo": "The Soldier",
+        "nick.ederson": "The Sweeper", "nick.bremer": "The Bull", "nick.wendell": "The Wing",
+        "nick.joaogomes": "The Engine", "nick.savinho": "The Spark", "nick.martinelli": "Gabi",
 
         // Trophies
         "trophy.worldcup.title": "World Cup",
@@ -107,14 +137,19 @@ enum Translations {
         "trophy.copaamerica.sub": "Last lifted 2019",
         "trophy.confed.title": "Confed. Cup",
         "trophy.confed.sub": "Record holders",
+        "trophy.olympics.title": "Olympic Gold",
+        "trophy.olympics.sub": "Rio 2016 · Tokyo 2020",
         "trophy.copa2026.title": "Copa 2026",
         "trophy.copa2026.sub": "Group stage in progress",
 
         // Kit
         "kit.jersey.name": "2026 Home Jersey", "kit.jersey.detail": "Canarinho · Dri-FIT ADV",
         "kit.boot.name": "Phantom Boots", "kit.boot.detail": "Firm-ground · signature",
+        "kit.away.name": "2026 Away Jersey", "kit.away.detail": "Azul Celeste · Dri-FIT ADV",
         "kit.whistle.name": "Match Whistle", "kit.whistle.detail": "Official referee edition",
         "kit.flag.name": "Supporter Flag", "kit.flag.detail": "Ordem e Progresso",
+        "kit.scarf.name": "Supporter Scarf", "kit.scarf.detail": "Knit · terrace classic",
+        "kit.cap.name": "Crest Cap", "kit.cap.detail": "Adjustable · embroidered crest",
 
         // Legends — nicknames
         "legendNick.pele": "The King",
@@ -126,6 +161,10 @@ enum Translations {
         "legendNick.ronaldinho": "The Wizard",
         "legendNick.robertocarlos": "The Bullet",
         "legendNick.cafu": "The Express Train",
+        "legendNick.jairzinho": "The Hurricane",
+        "legendNick.carlosalberto": "O Capita",
+        "legendNick.rivaldo": "The Magician",
+        "legendNick.taffarel": "Saint Taffarel",
 
         // Legends — bios
         "legend.pele.bio": "The only man to win three World Cups, Pelé scored over a thousand career goals and turned football into art.",
@@ -137,6 +176,10 @@ enum Translations {
         "legend.ronaldinho.bio": "All joy and elastico, Ronaldinho made defenders laugh and cry, winning a World Cup and two Ballons d'Or.",
         "legend.robertocarlos.bio": "The thunderbolt left-back whose impossible free-kick defied physics and whose runs broke every flank.",
         "legend.cafu.bio": "The most-capped Brazilian and the only player to start three straight World Cup finals.",
+        "legend.jairzinho.bio": "The only man to score in every round of a World Cup, Jairzinho tore down the wing in the 1970 masterpiece.",
+        "legend.carlosalberto.bio": "Captain of 1970 and author of the greatest team goal ever scored — the perfect finish to a perfect move.",
+        "legend.rivaldo.bio": "A Ballon d'Or genius of the left foot, Rivaldo dragged Brazil to the 2002 title with goals from everywhere.",
+        "legend.taffarel.bio": "The shot-stopper who saved the decisive penalties in 1994 to end Brazil's 24-year wait.",
 
         // Legends — honours
         "legend.pele.honour": "3× World Cup",
@@ -148,8 +191,14 @@ enum Translations {
         "legend.ronaldinho.honour": "WC '02 · 2× Ballon d'Or",
         "legend.robertocarlos.honour": "WC '02 · 125 caps",
         "legend.cafu.honour": "2× World Cup · 142 caps",
+        "legend.jairzinho.honour": "WC '70 · scored every round",
+        "legend.carlosalberto.honour": "WC '70 · Captain",
+        "legend.rivaldo.honour": "WC '02 · Ballon d'Or '99",
+        "legend.taffarel.honour": "2× World Cup · 101 caps",
 
         // History timeline
+        "history.wc1938.title": "1938 · The Awakening",
+        "history.wc1938.detail": "Leônidas and the bicycle kick light up France as Brazil finish third — the world takes notice.",
         "history.wc1950.title": "1950 · The Maracanazo",
         "history.wc1950.detail": "Brazil lose the final at a packed Maracanã to Uruguay — the wound that built a dynasty.",
         "history.wc1958.title": "1958 · First Star",
@@ -166,6 +215,8 @@ enum Translations {
         "history.wc2002.detail": "Ronaldo, Rivaldo and Ronaldinho light up Asia for a record fifth title.",
         "history.mineirazo2014.title": "2014 · The Mineirazo",
         "history.mineirazo2014.detail": "A 7–1 semi-final loss to Germany at home — the darkest night, and a rebuilding.",
+        "history.olympics2016.title": "2016 · Olympic Gold",
+        "history.olympics2016.detail": "Neymar's penalty wins the one trophy that always eluded Brazil — gold on home soil at the Maracanã.",
         "history.copa2019.title": "2019 · Copa América",
         "history.copa2019.detail": "Brazil lift the continental crown on home soil at the Maracanã.",
         "history.copa2026.title": "2026 · The Hunt for Six",
@@ -188,9 +239,36 @@ enum Translations {
         "contentSection": "Conteúdo",
         "languageHint": "Toque numa bandeira para trocar na hora",
 
+        // Startup / connectivity
+        "loadingTagline": "Aquecendo o gramado…",
+        "offlineTitle": "Sem Conexão",
+        "offlineMessage": "Não foi possível carregar as novidades. Verifique sua conexão e tente novamente.",
+
         // Tabs
         "tabHub": "Início", "tabGroup": "Grupo", "tabSquad": "Elenco",
-        "tabHistory": "História", "tabCabinet": "Galeria",
+        "tabHistory": "História", "tabCabinet": "Galeria", "tabNews": "Notícias",
+
+        // News
+        "newsTitle": "Notícias do Futebol",
+        "newsSubtitle": "Manchetes ao vivo · puxe para atualizar",
+        "newsEmpty": "Nenhuma notícia agora. Puxe para atualizar.",
+        "newsRetry": "Tentar de Novo",
+        "newsErrorNetwork": "Não foi possível acessar o serviço de notícias. Verifique sua conexão.",
+        "newsErrorServer": "O serviço de notícias está indisponível no momento.",
+        "newsErrorKey": "As notícias ainda não foram configuradas.",
+        "newsKeyHint": "Adicione uma chave da GNews em Config.xcconfig para ativar o feed ao vivo.",
+
+        // Profile
+        "fanProfile": "Perfil do Torcedor",
+        "yourName": "Seu Nome",
+        "namePlaceholder": "Adicione seu nome",
+        "editPhoto": "Editar Foto",
+        "photoHint": "Adicione uma foto para personalizar seu cartão de torcedor.",
+        "takePhoto": "Tirar Foto",
+        "chooseLibrary": "Escolher da Galeria",
+        "removePhoto": "Remover Foto",
+        "cancel": "Cancelar",
+        "tapToAddPhoto": "Toque para adicionar uma foto",
 
         // Hub
         "predictEarn": "Palpite & Ganhe",
@@ -247,7 +325,8 @@ enum Translations {
         "team.BRA": "Brasil", "team.ARG": "Argentina", "team.FRA": "França",
         "team.ESP": "Espanha", "team.POR": "Portugal", "team.ENG": "Inglaterra",
         "team.GER": "Alemanha", "team.URU": "Uruguai", "team.CRO": "Croácia",
-        "team.NED": "Holanda",
+        "team.NED": "Holanda", "team.ITA": "Itália", "team.MEX": "México",
+        "team.USA": "Estados Unidos", "team.COL": "Colômbia",
 
         // Positions
         "posLong.GK": "Goleiro", "posLong.DEF": "Zagueiro",
@@ -262,6 +341,8 @@ enum Translations {
         "nick.beraldo": "A Muralha", "nick.bruno": "O Maestro", "nick.paqueta": "O Coringa",
         "nick.rodrygo": "Foguete", "nick.vini": "Vini Jr", "nick.endrick": "O Futuro",
         "nick.raphinha": "Pinga", "nick.casemiro": "O Cabeça de Área", "nick.danilo": "O Soldado",
+        "nick.ederson": "O Líbero", "nick.bremer": "O Touro", "nick.wendell": "A Seta",
+        "nick.joaogomes": "O Motor", "nick.savinho": "A Faísca", "nick.martinelli": "Gabi",
 
         // Trophies
         "trophy.worldcup.title": "Copa do Mundo",
@@ -270,14 +351,19 @@ enum Translations {
         "trophy.copaamerica.sub": "Última em 2019",
         "trophy.confed.title": "Copa das Confed.",
         "trophy.confed.sub": "Maiores campeões",
+        "trophy.olympics.title": "Ouro Olímpico",
+        "trophy.olympics.sub": "Rio 2016 · Tóquio 2020",
         "trophy.copa2026.title": "Copa 2026",
         "trophy.copa2026.sub": "Fase de grupos em andamento",
 
         // Kit
         "kit.jersey.name": "Camisa I 2026", "kit.jersey.detail": "Canarinho · Dri-FIT ADV",
         "kit.boot.name": "Chuteira Phantom", "kit.boot.detail": "Campo firme · edição",
+        "kit.away.name": "Camisa II 2026", "kit.away.detail": "Azul Celeste · Dri-FIT ADV",
         "kit.whistle.name": "Apito Oficial", "kit.whistle.detail": "Edição de arbitragem",
         "kit.flag.name": "Bandeira do Torcedor", "kit.flag.detail": "Ordem e Progresso",
+        "kit.scarf.name": "Cachecol do Torcedor", "kit.scarf.detail": "Tricô · clássico de arquibancada",
+        "kit.cap.name": "Boné do Escudo", "kit.cap.detail": "Ajustável · escudo bordado",
 
         // Legends — nicknames
         "legendNick.pele": "O Rei",
@@ -289,6 +375,10 @@ enum Translations {
         "legendNick.ronaldinho": "O Bruxo",
         "legendNick.robertocarlos": "O Homem-Bala",
         "legendNick.cafu": "O Pendolino",
+        "legendNick.jairzinho": "O Furacão",
+        "legendNick.carlosalberto": "O Capita",
+        "legendNick.rivaldo": "O Mágico",
+        "legendNick.taffarel": "São Taffarel",
 
         // Legends — bios
         "legend.pele.bio": "Único tricampeão mundial, Pelé marcou mais de mil gols na carreira e transformou o futebol em arte.",
@@ -300,6 +390,10 @@ enum Translations {
         "legend.ronaldinho.bio": "Pura alegria e elástico, Ronaldinho fez zagueiros rirem e chorarem, com um Mundial e duas Bolas de Ouro.",
         "legend.robertocarlos.bio": "O lateral-canhão cuja falta impossível desafiou a física e cujas subidas quebravam qualquer lado.",
         "legend.cafu.bio": "O brasileiro com mais jogos e o único a disputar três finais de Copa seguidas como titular.",
+        "legend.jairzinho.bio": "O único a marcar em todas as fases de uma Copa, Jairzinho voou pela ponta na obra-prima de 1970.",
+        "legend.carlosalberto.bio": "Capitão de 1970 e autor do gol mais bonito da história — o arremate perfeito de uma jogada perfeita.",
+        "legend.rivaldo.bio": "Gênio canhoto e Bola de Ouro, Rivaldo carregou o Brasil ao Penta de 2002 com gols de todo lugar.",
+        "legend.taffarel.bio": "O goleiro que defendeu os pênaltis decisivos em 1994 e encerrou um jejum de 24 anos.",
 
         // Legends — honours
         "legend.pele.honour": "3× Copa do Mundo",
@@ -311,8 +405,14 @@ enum Translations {
         "legend.ronaldinho.honour": "Copa '02 · 2× Bola de Ouro",
         "legend.robertocarlos.honour": "Copa '02 · 125 jogos",
         "legend.cafu.honour": "2× Mundial · 142 jogos",
+        "legend.jairzinho.honour": "Copa '70 · gol em todas as fases",
+        "legend.carlosalberto.honour": "Copa '70 · Capitão",
+        "legend.rivaldo.honour": "Copa '02 · Bola de Ouro '99",
+        "legend.taffarel.honour": "2× Mundial · 101 jogos",
 
         // History timeline
+        "history.wc1938.title": "1938 · O Despertar",
+        "history.wc1938.detail": "Leônidas e a bicicleta encantam a França e o Brasil fica em terceiro — o mundo passa a reparar.",
         "history.wc1950.title": "1950 · O Maracanazo",
         "history.wc1950.detail": "O Brasil perde a final num Maracanã lotado para o Uruguai — a ferida que construiu uma dinastia.",
         "history.wc1958.title": "1958 · A Primeira Estrela",
@@ -329,6 +429,8 @@ enum Translations {
         "history.wc2002.detail": "Ronaldo, Rivaldo e Ronaldinho brilham na Ásia pelo quinto título recorde.",
         "history.mineirazo2014.title": "2014 · O Mineirazo",
         "history.mineirazo2014.detail": "Um 7 a 1 da Alemanha em casa na semifinal — a noite mais escura, e uma reconstrução.",
+        "history.olympics2016.title": "2016 · Ouro Olímpico",
+        "history.olympics2016.detail": "O pênalti de Neymar conquista o troféu que sempre faltou — ouro em casa, no Maracanã.",
         "history.copa2019.title": "2019 · Copa América",
         "history.copa2019.detail": "O Brasil levanta a taça continental em casa, no Maracanã.",
         "history.copa2026.title": "2026 · A Caça ao Hexa",

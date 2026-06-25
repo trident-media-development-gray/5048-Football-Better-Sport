@@ -8,8 +8,19 @@ enum LKey: String {
     case appName, headerSubtitle, done, settings, language, about, version
     case aboutBlurb, generalSection, contentSection, languageHint
 
+    // Startup / connectivity
+    case loadingTagline, offlineTitle, offlineMessage
+
     // Tabs
-    case tabHub, tabGroup, tabSquad, tabHistory, tabCabinet
+    case tabHub, tabGroup, tabSquad, tabHistory, tabCabinet, tabNews
+
+    // News
+    case newsTitle, newsSubtitle, newsEmpty, newsRetry
+    case newsErrorNetwork, newsErrorServer, newsErrorKey, newsKeyHint
+
+    // Profile
+    case fanProfile, yourName, namePlaceholder, editPhoto, photoHint
+    case takePhoto, chooseLibrary, removePhoto, cancel, tapToAddPhoto
 
     // Hub
     case predictEarn, starMen, featured, kickOff, resume, pause, playAgain

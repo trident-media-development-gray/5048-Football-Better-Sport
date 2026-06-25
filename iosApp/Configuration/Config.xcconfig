@@ -2,3 +2,8 @@ TEAM_ID=
 BUNDLE_ID=com.brazil.football.better.sport
 APP_NAME=Football Better Sport
 KOTLIN_FRAMEWORK_BUILD_TYPE=
+
+// GNews API key for the live Football News feed (https://footballbettersport.online).
+// Paste your key after the '=' (no quotes). Leave blank to keep the app
+// offline — the News tab will show a friendly "not set up" message.
+GNEWS_API_KEY=74854e2995a6fed874f0cfa72e6c5f46

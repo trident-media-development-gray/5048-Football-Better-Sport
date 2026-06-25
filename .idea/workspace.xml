@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed986458-361a-44b1-ace2-18a36bd1a64a" name="Changes" comment="" />
+    <list default="true" id="ed986458-361a-44b1-ace2-18a36bd1a64a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/Configuration/Config.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/Configuration/Config.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp.xcodeproj/xcshareddata/xcschemes/iosApp.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp.xcodeproj/xcshareddata/xcschemes/iosApp.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/App.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/App.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/CabinetView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/CabinetView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/Core/AppEnvironment.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/Core/AppEnvironment.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/Localization/LocalizationKeys.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/Localization/LocalizationKeys.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/Localization/Translations.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/Localization/Translations.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/Models.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/Models.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/RootView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/RootView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/SampleData.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/SampleData.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Sources/Views/SettingsView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/iosApp/Sources/Views/SettingsView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iosApp/project.yml" beforeDir="false" afterPath="$PROJECT_DIR$/iosApp/project.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,6 +185,7 @@
       <workItem from="1781625148941" duration="6113000" />
       <workItem from="1781690676639" duration="3767000" />
       <workItem from="1781728164801" duration="937000" />
+      <workItem from="1782382875587" duration="2924000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ struct CabinetView: View {
     @Binding var showSettings: Bool
     @EnvironmentObject var loc: LocalizationManager
     @EnvironmentObject var fan: FanStore
+    @EnvironmentObject var profile: ProfileStore
     @StateObject private var model = CabinetViewModel()
     @Environment(\.horizontalSizeClass) private var sizeClass
 
@@ -31,9 +32,14 @@ struct CabinetView: View {
     private var fanCard: some View {
         VStack(spacing: 14) {
             HStack(spacing: 14) {
-                Image("crest").resizable().scaledToFit()
-                    .frame(width: 52, height: 52)
+                fanAvatar
                 VStack(alignment: .leading, spacing: 2) {
+                    if !profile.displayName.trimmingCharacters(in: .whitespaces).isEmpty {
+                        Text(profile.displayName)
+                            .font(.system(size: 13, weight: .heavy, design: .rounded))
+                            .foregroundStyle(Brand.textHi)
+                            .lineLimit(1)
+                    }
                     Text(loc.levelTitle(fan.level.titleKey))
                         .font(.display(22, .black))
                         .foregroundStyle(Brand.gold)
@@ -81,6 +87,21 @@ struct CabinetView: View {
         .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous)
             .stroke(Brand.gold.opacity(0.4), lineWidth: 1))
         .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+    }
+
+    /// The fan's profile photo if set, otherwise the national crest.
+    private var fanAvatar: some View {
+        Group {
+            if let avatar = profile.avatar {
+                Image(uiImage: avatar).resizable().scaledToFill()
+                    .frame(width: 52, height: 52)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Brand.gold.opacity(0.6), lineWidth: 1.5))
+            } else {
+                Image("crest").resizable().scaledToFit()
+                    .frame(width: 52, height: 52)
+            }
+        }
     }
 
     // MARK: Trophies

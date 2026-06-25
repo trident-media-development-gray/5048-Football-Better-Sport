@@ -15,6 +15,10 @@ enum Catalog {
     static let uru = Team(id: "URU", fallbackName: "Uruguay",   primary: Color(hex: 0x5AA9E6), secondary: .black,               flag: "🇺🇾")
     static let cro = Team(id: "CRO", fallbackName: "Croatia",   primary: Color(hex: 0xC8102E), secondary: .white,               flag: "🇭🇷")
     static let ned = Team(id: "NED", fallbackName: "Netherlands", primary: Color(hex: 0xF36C21), secondary: .white,             flag: "🇳🇱")
+    static let ita = Team(id: "ITA", fallbackName: "Italy",     primary: Color(hex: 0x1B4FA0), secondary: .white,               flag: "🇮🇹")
+    static let mex = Team(id: "MEX", fallbackName: "Mexico",    primary: Color(hex: 0x046A38), secondary: .white,               flag: "🇲🇽")
+    static let usa = Team(id: "USA", fallbackName: "United States", primary: Color(hex: 0x1B2E86), secondary: Color(hex: 0xB31942), flag: "🇺🇸")
+    static let col = Team(id: "COL", fallbackName: "Colombia",  primary: Color(hex: 0xFCD116), secondary: Color(hex: 0x003893), flag: "🇨🇴")
 
     static let groupDTeams = [bra, esp, ned, cro]
 
@@ -33,6 +37,12 @@ enum Catalog {
         Player(slug: "vini",      name: "Vinícius Júnior", fallbackNickname: "Vini Jr",    number: 11, position: .FWD, photo: "player2", rating: 90, pace: 95, shooting: 86, passing: 80, defending: 34, goals: 24, assists: 16, caps: 39),
         Player(slug: "raphinha",  name: "Raphinha",        fallbackNickname: "Pinga",      number: 19, position: .FWD, photo: nil,       rating: 85, pace: 88, shooting: 82, passing: 81, defending: 45, goals: 15, assists: 13, caps: 40),
         Player(slug: "endrick",   name: "Endrick",         fallbackNickname: "The Future", number: 9,  position: .FWD, photo: nil,       rating: 81, pace: 89, shooting: 83, passing: 70, defending: 30, goals: 9,  assists: 3,  caps: 14),
+        Player(slug: "ederson",   name: "Ederson",         fallbackNickname: "The Sweeper",number: 23, position: .GK,  photo: nil,       rating: 86, pace: 60, shooting: 28, passing: 90, defending: 84, goals: 0,  assists: 2,  caps: 33),
+        Player(slug: "bremer",    name: "Gleison Bremer",  fallbackNickname: "The Bull",   number: 14, position: .DEF, photo: nil,       rating: 83, pace: 80, shooting: 36, passing: 70, defending: 85, goals: 2,  assists: 0,  caps: 16),
+        Player(slug: "wendell",   name: "Wendell",         fallbackNickname: "The Wing",   number: 16, position: .DEF, photo: nil,       rating: 78, pace: 82, shooting: 48, passing: 76, defending: 76, goals: 1,  assists: 4,  caps: 9),
+        Player(slug: "joaogomes", name: "João Gomes",      fallbackNickname: "The Engine", number: 15, position: .MID, photo: nil,       rating: 80, pace: 78, shooting: 64, passing: 78, defending: 82, goals: 2,  assists: 2,  caps: 17),
+        Player(slug: "savinho",   name: "Sávio",           fallbackNickname: "The Spark",  number: 21, position: .FWD, photo: nil,       rating: 82, pace: 90, shooting: 76, passing: 82, defending: 40, goals: 7,  assists: 10, caps: 19),
+        Player(slug: "martinelli",name: "Gabriel Martinelli", fallbackNickname: "Gabi",   number: 20, position: .FWD, photo: nil,       rating: 83, pace: 92, shooting: 80, passing: 78, defending: 42, goals: 8,  assists: 6,  caps: 22),
     ]
 
     // MARK: Legends (stars of the past)
@@ -47,11 +57,16 @@ enum Catalog {
         Legend(slug: "ronaldinho",    name: "Ronaldinho",      era: "1999–2013", position: .FWD, goals: 33,  caps: 97,  accent: Brand.neon),
         Legend(slug: "robertocarlos", name: "Roberto Carlos",  era: "1992–2006", position: .DEF, goals: 11,  caps: 125, accent: Brand.blue),
         Legend(slug: "cafu",          name: "Cafu",            era: "1990–2006", position: .DEF, goals: 5,   caps: 142, accent: Brand.gold),
+        Legend(slug: "jairzinho",     name: "Jairzinho",       era: "1964–1982", position: .FWD, goals: 33,  caps: 81,  accent: Brand.danger),
+        Legend(slug: "carlosalberto", name: "Carlos Alberto",  era: "1964–1977", position: .DEF, goals: 8,   caps: 53,  accent: Brand.gold),
+        Legend(slug: "rivaldo",       name: "Rivaldo",         era: "1993–2003", position: .MID, goals: 35,  caps: 74,  accent: Brand.blue),
+        Legend(slug: "taffarel",      name: "Cláudio Taffarel",era: "1988–1998", position: .GK,  goals: 0,   caps: 101, accent: Brand.silver),
     ]
 
     // MARK: History timeline
 
     static let history: [HistoryEvent] = [
+        HistoryEvent(slug: "wc1938",        year: 1938, isTriumph: false),
         HistoryEvent(slug: "wc1950",        year: 1950, isTriumph: false),
         HistoryEvent(slug: "wc1958",        year: 1958, isTriumph: true),
         HistoryEvent(slug: "wc1962",        year: 1962, isTriumph: true),
@@ -60,6 +75,7 @@ enum Catalog {
         HistoryEvent(slug: "wc1994",        year: 1994, isTriumph: true),
         HistoryEvent(slug: "wc2002",        year: 2002, isTriumph: true),
         HistoryEvent(slug: "mineirazo2014", year: 2014, isTriumph: false),
+        HistoryEvent(slug: "olympics2016",  year: 2016, isTriumph: true),
         HistoryEvent(slug: "copa2019",      year: 2019, isTriumph: true),
         HistoryEvent(slug: "copa2026",      year: 2026, isTriumph: false),
     ]
@@ -73,6 +89,9 @@ enum Catalog {
         Fixture(home: bra, away: esp, homeScore: 0, awayScore: 0, group: "D", matchday: 3, schedule: .upcoming(.wed, "21:00")),
         Fixture(home: fra, away: eng, homeScore: 0, awayScore: 0, group: "C", matchday: 3, schedule: .upcoming(.thu, "18:00")),
         Fixture(home: ger, away: uru, homeScore: 0, awayScore: 0, group: "A", matchday: 3, schedule: .upcoming(.fri, "21:00")),
+        Fixture(home: ned, away: cro, homeScore: 3, awayScore: 1, group: "D", matchday: 2, schedule: .result),
+        Fixture(home: mex, away: usa, homeScore: 2, awayScore: 2, group: "B", matchday: 2, schedule: .result),
+        Fixture(home: col, away: ita, homeScore: 0, awayScore: 0, group: "E", matchday: 3, schedule: .upcoming(.sat, "16:00")),
     ]
 
     static var featured: Fixture {
@@ -85,6 +104,7 @@ enum Catalog {
         Trophy(titleKey: "trophy.worldcup.title",    subtitleKey: "trophy.worldcup.sub",    badge: "×5", image: "trophy", owned: true),
         Trophy(titleKey: "trophy.copaamerica.title", subtitleKey: "trophy.copaamerica.sub", badge: "×9", image: "trophy", owned: true),
         Trophy(titleKey: "trophy.confed.title",      subtitleKey: "trophy.confed.sub",      badge: "×4", image: "trophy", owned: true),
+        Trophy(titleKey: "trophy.olympics.title",    subtitleKey: "trophy.olympics.sub",    badge: "×2", image: "trophy", owned: true),
         Trophy(titleKey: "trophy.copa2026.title",    subtitleKey: "trophy.copa2026.sub",    badge: "?",  image: "crest",  owned: false),
     ]
 
@@ -93,7 +113,10 @@ enum Catalog {
     static let kit: [KitItem] = [
         KitItem(nameKey: "kit.jersey.name",  detailKey: "kit.jersey.detail",  image: "jersey",      price: "$129"),
         KitItem(nameKey: "kit.boot.name",    detailKey: "kit.boot.detail",    image: "boot",        price: "$249"),
+        KitItem(nameKey: "kit.away.name",    detailKey: "kit.away.detail",    image: "jersey",      price: "$129"),
         KitItem(nameKey: "kit.whistle.name", detailKey: "kit.whistle.detail", image: "whistle",     price: "$24"),
         KitItem(nameKey: "kit.flag.name",    detailKey: "kit.flag.detail",    image: "flag_brazil", price: "$39"),
+        KitItem(nameKey: "kit.scarf.name",   detailKey: "kit.scarf.detail",   image: "flag_brazil", price: "$34"),
+        KitItem(nameKey: "kit.cap.name",     detailKey: "kit.cap.detail",     image: "crest",       price: "$29"),
     ]
 }

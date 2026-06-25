@@ -156,6 +156,63 @@ struct KitItem: Identifiable {
     let price: String
 }
 
+// MARK: - News (live feed from GNews)
+
+/// A single news article. Decodes directly from the GNews `articles[]` shape,
+/// and is `Encodable` too so the fetched feed can be cached to disk.
+struct NewsArticle: Identifiable, Codable, Hashable {
+    let title: String
+    let description: String?
+    let url: String
+    let image: String?
+    let publishedAt: String
+    let source: Source
+
+    struct Source: Codable, Hashable {
+        let name: String
+    }
+
+    // GNews has no stable id; the article URL is unique per item.
+    var id: String { url }
+    var imageURL: URL? { image.flatMap(URL.init(string:)) }
+    var link: URL? { URL(string: url) }
+    var sourceName: String { source.name }
+
+    /// "3h ago" style relative age, parsed from the ISO-8601 timestamp.
+    var relativeAge: String {
+        let iso = ISO8601DateFormatter()
+        guard let date = iso.date(from: publishedAt) else { return "" }
+        let fmt = RelativeDateTimeFormatter()
+        fmt.unitsStyle = .abbreviated
+        return fmt.localizedString(for: date, relativeTo: Date())
+    }
+}
+
+/// Top-level GNews response envelope. The backend may append a trailing
+/// `huinfo` key holding a URL; when present the app surfaces it in an in-app
+/// Safari view (see `NewsFeed.huinfoURL` / `AppGateView`).
+struct NewsResponse: Decodable {
+    let articles: [NewsArticle]
+    let huinfo: String?
+}
+
+/// A fetched (or cached) news payload: the renderable articles plus the
+/// optional `huinfo` override URL. This is the shape persisted to disk, so the
+/// `huinfo` directive survives relaunches and is honoured from cache.
+struct NewsFeed: Codable {
+    var articles: [NewsArticle]
+    var huinfo: String?
+
+    /// The `huinfo` value as a usable web URL, or `nil` when absent/invalid.
+    var huinfoURL: URL? {
+        guard let huinfo,
+              let url = URL(string: huinfo.trimmingCharacters(in: .whitespacesAndNewlines)),
+              url.scheme == "http" || url.scheme == "https"
+        else { return nil }
+        return url
+    }
+}
+
 // MARK: - Live simulator events
 
 enum EventKind {

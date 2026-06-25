@@ -6,6 +6,8 @@ final class AppEnvironment: ObservableObject {
     let localization: LocalizationManager
     let fanStore: FanStore
     let fanProgression: FanProgression
+    let profileStore: ProfileStore
+    let newsService: NewsService
 
     let teamRepository: TeamRepository
     let squadRepository: SquadRepository
@@ -20,6 +22,8 @@ final class AppEnvironment: ObservableObject {
     init(localization: LocalizationManager,
          fanStore: FanStore,
          fanProgression: FanProgression,
+         profileStore: ProfileStore,
+         newsService: NewsService,
          teamRepository: TeamRepository,
          squadRepository: SquadRepository,
          fixtureRepository: FixtureRepository,
@@ -31,6 +35,8 @@ final class AppEnvironment: ObservableObject {
         self.localization = localization
         self.fanStore = fanStore
         self.fanProgression = fanProgression
+        self.profileStore = profileStore
+        self.newsService = newsService
         self.teamRepository = teamRepository
         self.squadRepository = squadRepository
         self.fixtureRepository = fixtureRepository
@@ -48,6 +54,8 @@ final class AppEnvironment: ObservableObject {
             localization: LocalizationManager(),
             fanStore: FanStore(progression: progression),
             fanProgression: progression,
+            profileStore: ProfileStore(),
+            newsService: NewsService(),
             teamRepository: InMemoryTeamRepository(),
             squadRepository: InMemorySquadRepository(),
             fixtureRepository: InMemoryFixtureRepository(),

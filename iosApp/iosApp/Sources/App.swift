@@ -6,10 +6,11 @@ struct SelecaoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            AppGateView()
                 .environmentObject(env)
                 .environmentObject(env.localization)
                 .environmentObject(env.fanStore)
+                .environmentObject(env.profileStore)
         }
     }
 }
